@@ -31,14 +31,19 @@
 * Ideia
   - Titulo
   - Corpo (markdown - https://jejacks0n.github.io/mercury/)
-  * UpVotes
+  * User
+  * Stars
   * Comentario
   * v2: Tag
+
+* Star
+  - Usuario
+  - Ideia
 
 ```text
 v2: n Ideias -> n Tags
    1 Usuario -> n Ideias
-   1 Usuario -> n Upvotes -- 1 Upvote  -> 1 Ideia
+   1 Usuario -> n Stars -- 1 Upvote  -> 1 Ideia
    1 Usuario -> n Comentarios
      1 Ideia -> n Comentarios
 ```

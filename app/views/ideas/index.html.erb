@@ -1,0 +1,18 @@
+<h1>Ideas</h1>
+
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<div class="row gy-2">
+  <% @ideas.each do |idea| %>
+    <div class="card mx-1" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= idea.title %></h5>
+        <p class="card-text"><%= idea.body %></p>
+        <%= link_to 'Show', idea, class: 'btn btn-info' %>
+        <%= link_to 'Edit', edit_idea_path(idea), class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>

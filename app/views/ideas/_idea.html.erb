@@ -1,0 +1,11 @@
+<div class="col">
+  <div class="card h-100">
+    <h5 class="card-header"><%= link_to idea.title, edit_idea_url(idea) %></h5>
+    <div class="card-body">
+      <p class="card-subtitle">
+        <i class="fas fa-star text-warning"></i>&nbsp;<%= idea.stars.count %>
+      </p>
+      <p class="card-text mt-1"><%= idea.body %></p>
+    </div>
+  </div>
+</div>

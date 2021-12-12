@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= @idea.title %></p>
-<p><%= @idea.body %></p>
+<div class="my-4">
+<%= render partial: @idea %>
+</div>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>

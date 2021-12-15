@@ -15,21 +15,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Coming Up...</a>
-    <ul class="navbar-nav d-flex">
+    <ul class="navbar-nav d-flex align-items-center">
+      <li class="nav-item"><%= sign_in_or_out %></li>
       <li class="nav-item me-2">
         <%= link_to new_idea_path, class: 'btn btn-success' do %>
           <i class="fas fa-plus-circle"></i>&nbsp;Criar nova
         <% end %>
       </li>
-      <!--        <li class="nav-item">-->
-      <!--          <a class="nav-link" href="#">Features</a>-->
-      <!--        </li>-->
-      <!--        <li class="nav-item">-->
-      <!--          <a class="nav-link" href="#">Pricing</a>-->
-      <!--        </li>-->
-      <!--        <li class="nav-item">-->
-      <!--          <a class="nav-link disabled">Disabled</a>-->
-      <!--        </li>-->
     </ul>
   </div>
 </nav>

@@ -3,7 +3,12 @@ class IdeasController < ApplicationController
 
   # GET /ideas or /ideas.json
   def index
-    @ideas = Idea.all
+    @ideas     = Idea.includes(:stars)
+                     .joins(:stars)
+                     .all
+    @num_stars = Hash[
+      @ideas.map { |idea| [idea.id, idea.stars.size] }
+    ]
   end
 
   # GET /ideas/1 or /ideas/1.json

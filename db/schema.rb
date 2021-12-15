@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_11_15_034930) do
     t.string "twitch_avatar"
     t.string "twitch_access_token"
     t.string "twitch_refresh_token"
+    t.string "session_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

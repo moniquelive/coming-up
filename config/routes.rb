@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  root 'ideas#index'
+
   resources :ideas
 
-  root 'ideas#index'
+  get 'auth/twitch/callback', to: 'sessions#create'
+  post 'logout', to: 'sessions#destroy', as: :session_destroy
 end

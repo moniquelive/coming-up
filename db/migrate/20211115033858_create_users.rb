@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :twitch_avatar
       t.string :twitch_access_token
       t.string :twitch_refresh_token
+      t.string :session_token
 
       t.timestamps
     end

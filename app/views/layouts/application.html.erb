@@ -16,12 +16,14 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Coming Up...</a>
     <ul class="navbar-nav d-flex align-items-center">
+      <% if can? :create, Idea %>
+        <li class="nav-item me-2">
+          <%= link_to new_idea_path, class: 'btn btn-success' do %>
+            <i class="fas fa-plus-circle"></i>&nbsp;Criar nova
+          <% end %>
+        </li>
+      <% end %>
       <li class="nav-item"><%= sign_in_or_out %></li>
-      <li class="nav-item me-2">
-        <%= link_to new_idea_path, class: 'btn btn-success' do %>
-          <i class="fas fa-plus-circle"></i>&nbsp;Criar nova
-        <% end %>
-      </li>
     </ul>
   </div>
 </nav>

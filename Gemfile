@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'omniauth-twitch', github: 'WebTheoryLLC/omniauth-twitch'
 gem 'omniauth-rails_csrf_protection'
 gem 'net-smtp'
+gem 'cancancan'
+gem 'twitch-api', github: 'mauricew/ruby-twitch-api'
+

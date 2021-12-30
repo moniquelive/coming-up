@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+  load_and_authorize_resource
   before_action :set_idea, only: %i[ show edit update destroy ]
 
   # GET /ideas or /ideas.json
@@ -26,7 +27,7 @@ class IdeasController < ApplicationController
 
   # POST /ideas or /ideas.json
   def create
-    @idea = Idea.new(idea_params)
+    @idea = Idea.new(idea_params.merge(user: current_user))
 
     respond_to do |format|
       if @idea.save

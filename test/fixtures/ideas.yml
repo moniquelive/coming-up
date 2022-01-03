@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+idea1:
   title: MyString
   body: MyText
-  user: one
+  user: user1
 
-two:
+idea2:
   title: MyString
   body: MyText
-  user: two
+  user: user2

@@ -1,13 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+user1:
   twitch_id: MyString
   twitch_name: MyString
   twitch_avatar: MyString
   twitch_access_token: MyString
   twitch_refresh_token: MyString
+  follows_monique_since: 2019-01-01 00:00:00
 
-two:
+user2:
   twitch_id: MyString
   twitch_name: MyString
   twitch_avatar: MyString

@@ -2,7 +2,7 @@ require "test_helper"
 
 class IdeasControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @idea = ideas(:one)
+    @idea = ideas(:idea1)
   end
 
   test "should get index" do
@@ -21,7 +21,7 @@ class IdeasControllerTest < ActionDispatch::IntegrationTest
         idea: {
           title:   'title',
           body:    'body',
-          user_id: users(:one).id
+          user_id: users(:user1).id
         } }
     end
     assert_redirected_to idea_url(Idea.last)
@@ -38,7 +38,7 @@ class IdeasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update idea" do
-    patch idea_url(@idea), params: { idea: { title: 'title'} }
+    patch idea_url(@idea), params: { idea: { title: 'title' } }
     assert_redirected_to idea_url(@idea)
   end
 
@@ -46,7 +46,6 @@ class IdeasControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Idea.count', -1) do
       delete idea_url(@idea)
     end
-
     assert_redirected_to ideas_url
   end
 end
